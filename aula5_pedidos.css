@@ -1,0 +1,52 @@
+/*
+ * aula5_pedidos.css
+ */
+
+body{
+  font-family: verdana;
+  font-size: 11pt;
+}
+
+#lista{
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid silver;
+}
+
+#lista thead td{
+  background-color: gray;
+  text-align: center;
+  font-weight: bold;
+}
+
+#lista td{
+  padding: 4px;
+}
+
+#lista tfoot td{
+  padding: 12px 4px;
+  border-top: 2px solid gray;
+  text-align: right;
+}
+
+.valor{
+  text-align: right;
+}
+
+.valor span{
+  font-weight: bold;
+}
+
+#form{
+  width:300px; 
+}
+
+button.add{
+  float: right; 
+  margin-right: 25px;
+}
+
+#form label{
+  width:  120px;
+  display: inline-block;
+}

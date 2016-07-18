@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Aula 5 - Pedidos</title>
+    <meta charset="UTF-8"></meta>
+    <script type="text/javascript" src="jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="aula5_pedidos.js"></script>
+    <link rel="stylesheet" href="aula5_pedidos.css">
+    
+  </head>
+  
+  <body>
+    <h1>Aula 5 Pedidos</h1>
+
+    <fieldset id="form">
+      <legend>Adicione um produto</legend>
+      
+      <label>Produto Cod:</label><input type="text" name="produto-cod"/><br/>
+      <label>Produto Nome:</label><input type="text" name="produto"/><br/>
+      <label>Quantidade:</label><input type="text" name="quant"/><br/>
+      <label>Valor unitário:</label><input type="text" name="val-unit"/><br/>
+      
+      <button class="add">Adicionar</button>
+    </fieldset>
+    
+    <table id="lista">
+    
+      <thead>
+	<td>#</td><td>Cod</td><td>Produto</td><td>Quant.</td><td>Valor Unit.</td><td>Valor Total</td>
+      </thead>
+
+      <tbody>
+	<!--<tr><td>1</td><td>123-456</td><td>Amortecedor</td><td>4</td><td class="valor">R$ 356,00</td><td class="valor">R$ 1.424,00</td></tr> -->
+      </tbody>
+
+      <tfoot>
+	<tr><td colspan="5">Total do Pedido</td><td class="valor"><span>R$ 0,00</span></td></tr>
+      </tfoot>
+    
+    </table>
+    
+  </body>
+</html>
