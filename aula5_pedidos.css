@@ -50,3 +50,12 @@ button.add{
   width:  120px;
   display: inline-block;
 }
+
+.erro{
+  color: red;
+}
+
+.erro input{
+  border: 1px solid red;
+  color: red;
+}

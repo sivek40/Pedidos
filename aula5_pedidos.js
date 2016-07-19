@@ -8,16 +8,24 @@ $(document).ready(function(){
   var totalGeral = 0;
 
   $('button.add').click(function(){
+
+    var formValido = true;
+    
+    $('#form div.erro').removeClass('erro');
+    
+    $('#form input').each(function (index, elem){
+      if($(elem).val() == ''){
+	$(elem).parent().addClass('erro');
+	formValido = false;
+      }
+    });
+    
+    if (formValido == false) return;
     
     var cod = $('[name="produto-cod"]').val();
     var produto = $('[name="produto"]').val();
     var quant = $('[name="quant"]').val();
     var valUnit = $('[name="val-unit"]').val();
-    
-    if (cod == '') return;
-    if (produto == '') return;
-    if (quant == '') return;
-    if (valUnit == '') return;
 
     valUnit = parseFloat(valUnit).toFixed(2);
     var valTotal = valUnit * quant;
@@ -32,7 +40,6 @@ $(document).ready(function(){
     $('#lista tbody').append('<tr><td>'+numItem+'</td><td>'+cod+'</td><td>'+produto+'</td><td>'+quant+'</td><td class="valor">'+formataReais(parseFloat(valUnit))+'</td><td class="valor">'+formataReais(parseFloat(valTotal))+'</td></tr>');
     
     $('#lista tfoot .valor span').html(formataReais(totalGeral));
-    console.log($('#lista tfoot .valor span'));
     
     function formataReais(valor){
       var formatado = "R$ ";
@@ -50,6 +57,42 @@ $(document).ready(function(){
       return formatado;
     }
     
+  });
+  
+  $('.quant').keydown(function(evento){
+    console.log(evento.keyCode);
+    if (evento.keyCode == 08) return true; //back space
+    if (evento.keyCode == 37) return true; //seta esquerda
+    if (evento.keyCode == 39) return true; //seta direita
+    if (evento.keyCode == 35) return true; //end
+    if (evento.keyCode == 36) return true; //home
+    if (evento.keyCode == 46) return true; //del
+    if (evento.keyCode == 190 ||evento.keyCode == 110) return true; //(.) ponto
+    if (evento.keyCode == 188 ||evento.keyCode == 108) return true; //(,) virgula
+		      
+    if ((evento.keyCode >= 48 && evento.keyCode <= 57) || (evento.keyCode >= 96 && evento.keyCode <= 105) ){
+      return true;
+    } else {
+      return false;
+    }
+  });
+  
+  $('.val-unit').keydown(function(evento){
+    console.log(evento.keyCode);
+    if (evento.keyCode == 08) return true; //back space
+    if (evento.keyCode == 37) return true; //seta esquerda
+    if (evento.keyCode == 39) return true; //seta direita
+    if (evento.keyCode == 35) return true; //end
+    if (evento.keyCode == 36) return true; //home
+    if (evento.keyCode == 46) return true; //del
+    if (evento.keyCode == 190 ||evento.keyCode == 110) return true; //(.) ponto
+    if (evento.keyCode == 188 ||evento.keyCode == 108) return true; //(,) virgula
+		      
+    if ((evento.keyCode >= 48 && evento.keyCode <= 57) || (evento.keyCode >= 96 && evento.keyCode <= 105) ){
+      return true;
+    } else {
+      return false;
+    }
   });
   
 });
