@@ -1,0 +1,42 @@
+[
+{
+  "cod": 1234,
+  "nome": "Filtro de Oleo",
+  "preco": 34.89
+},
+{
+  "cod": 1235,
+  "nome": "Filtro de Ar",
+  "preco": 75.32
+},
+{
+  "cod": 1236,
+  "nome": "Filtro de Combustivel",
+  "preco": 101.34
+},
+{
+  "cod": 1237,
+  "nome": "Correia dentada",
+  "preco": 48.12
+},
+{
+  "cod": 1238,
+  "nome": "Oleo W40",
+  "preco": 19.54
+},
+{
+  "cod": 1239,
+  "nome": "Bucha direita",
+  "preco": 32.67
+},
+{
+  "cod": 1240,
+  "nome": "Amortecedor Direito",
+  "preco": 256.23
+},
+{
+  "cod": 1241,
+  "nome": "Amortecedor Esquerdo",
+  "preco": 256.23
+}
+]

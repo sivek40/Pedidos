@@ -14,10 +14,24 @@
     <fieldset id="form">
       <legend>Adicione um produto</legend>
       
-      <div><label>Produto Cod:</label><input type="text" name="produto-cod"/></div>
-      <div><label>Produto Nome:</label><input type="text" name="produto"/></div>
-      <div><label>Quantidade:</label><input type="text" name="quant" class="quant"/></div>
-      <div><label>Valor unitário:</label><input type="text" name="val-unit" class="val-unit"/></div>
+      <div>
+	<label>Produto Cod:</label>
+	<input type="text" name="produto-cod"/>
+      </div>
+      <div>
+	<label>Produto Nome:</label>
+	<select name="produto" class="produto-nome">
+	  <option value="">-- Selecione --</option>
+	</select>
+      </div>
+      <div>
+	<label>Quantidade:</label>
+	<input type="text" name="quant" class="quant"/>
+      </div>
+      <div>
+	<label>Valor unitário:</label>
+	<input type="text" name="val-unit" class="val-unit"/>
+      </div>
       
       <button class="add">Adicionar</button>
     </fieldset>
